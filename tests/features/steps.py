@@ -19,13 +19,16 @@ def step_for_mutiply(step, x, y):
     world.result = world.calc.multiply(int(x), int(y))
 
 
-'''
+
 #TODO finish step for volume
+@step(u'I input the volume with "([^"]*)" and "([^"]*)" and "([^"]*)"')
 def step_for_volume(step, x, y, z):
+    world.result = world.calc.volume(int(x), int(y), int(z))
     
 #TODO finish step for factorial
+@step(u'I input "([^"]*)"')
 def step_for_factorial(step, x):
-'''
+	world.result = world.calc.factorial(int(x))
 
 
 @step(u'I should see "([^"]+)"')
